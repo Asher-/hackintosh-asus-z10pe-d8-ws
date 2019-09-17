@@ -5,7 +5,7 @@
  * 
  * Disassembling to non-symbolic legacy ASL operators
  *
- * Disassembly of iASLebaJZF.aml, Tue Sep 17 17:22:06 2019
+ * Disassembly of iASL3iaFsw.aml, Tue Sep 17 18:01:34 2019
  *
  * Original Table Header:
  *     Signature        "SSDT"
@@ -18,7 +18,7 @@
  *     Compiler ID      "INTL"
  *     Compiler Version 0x20161210 (538317328)
  */
-DefinitionBlock ("", "SSDT", 5, "Asher", "LPCB", 0x00000000)
+DefinitionBlock ("", "SSDT", 5, "Asher", "LPC0", 0x00000000)
 {
     External (_SB_.PCI0, DeviceObj)    // (from opcode)
     External (_SB_.PCI0.LPC0, DeviceObj)    // (from opcode)
@@ -57,6 +57,7 @@ DefinitionBlock ("", "SSDT", 5, "Asher", "LPCB", 0x00000000)
         {
             Name (_HID, EisaId ("PNP0100"))  // _HID: Hardware ID
         }
+        Name (LPC0.TMR._STA, Zero)  // _STA: Status
     }
 }
 
